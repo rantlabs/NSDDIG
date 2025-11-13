@@ -10,6 +10,19 @@ go build -o nsdig .
 
 Use Go 1.21 or newer. The command above emits an executable named `nsdig` in the repository root.
 
+## Help
+
+./nsdig -h
+Usage of nsdig:
+  -file string
+    	Path to an input file
+  -ip string
+    	Single IPv4 address to process
+  -o string
+    	Path to an output file (defaults to stdout)
+  -workers int
+    	Number of concurrent lookup workers (default 10)
+
 ## Usage
 
 ```bash
