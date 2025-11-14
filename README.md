@@ -55,6 +55,23 @@ When a lookup fails:
 NONAME Edge03 | log | Internet  203.0.113.10 ...
 ```
 
+## Binary version available in this repo
+```
+nsdig_linux32	nsdig_linux64	nsdig_mac	nsdig_mac_arm64	nsdig_rpi_arm64	nsdig_rpi_armv6	nsdig_rpi_armv7	nsdig_win32.exe	nsdig_win64.exe
+```
+
+## Instructions for compiling binaries
+
+GOOS=windows GOARCH=386 go build -o nsdig_win32.exe .    <-- You can call the file anything you want after the -o (output) flag
+GOOS=windows GOARCH=amd64 go build -o nsdig_win64.exe .
+GOOS=linux GOARCH=386 go build -o nsdig_linux32 .
+GOOS=linux GOARCH=amd64 go build -o nsdig_linux64 .
+GOOS=darwin GOARCH=amd64 go build -o nsdig_mac .
+GOOS=linux GOARCH=arm GOARM=6 go build -o nsdig_rpi_armv6 .
+GOOS=linux GOARCH=arm GOARM=7 go build -o nsdig_rpi_armv7 .
+GOOS=linux GOARCH=arm64 go build -o nsdig_rpi_arm64 .
+GOOS=darwin GOARCH=arm64 go build -o nsdig_mac_arm64 .
+
 ## Notes
 
 - STDOUT mode streams each line as soon as its lookup completes; `-o` defers writing until the entire file is processed.
