@@ -12,6 +12,7 @@ Use Go 1.21 or newer. The command above emits an executable named `nsdig` in the
 
 ## Help
 
+```
 ./nsdig -h
 Usage of nsdig:
   -file string
@@ -22,6 +23,7 @@ Usage of nsdig:
     	Path to an output file (defaults to stdout)
   -workers int
     	Number of concurrent lookup workers (default 10)
+```
 
 ## Usage
 
